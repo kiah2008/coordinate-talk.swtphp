@@ -1,6 +1,10 @@
 <?php
 class mdl_account_basic extends ujn_model {
 
+	function get($uid) {
+		
+	}
+	
 	protected function __construct() {
 		parent::__construct(__CLASS__);
 		$this->_db = $this->mysql();

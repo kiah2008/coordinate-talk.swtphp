@@ -1,5 +1,15 @@
 <?php
+/**
+ * 
+ * 日志记录接口
+ *
+ */
 class log extends ujn_controller {
+	
+	/**
+	 * 
+	 * 记录gsm请求记录
+	 */
 	function gsm() {
 
 		$cellId = $_POST['cid'];
