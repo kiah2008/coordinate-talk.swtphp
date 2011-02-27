@@ -2,7 +2,7 @@
 class mdl_account_basic extends ujn_model {
 
 	function get($uid) {
-		
+		return array();
 	}
 	
 	protected function __construct() {

@@ -6,6 +6,9 @@
  */
 class account extends ujn_controller {
 	
+	// 取消自动模板输出
+	var $auto_render = false;
+	
 	/**
 	 * 
 	 * 解析用户信息数据, 并记录日志

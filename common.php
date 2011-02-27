@@ -12,7 +12,7 @@ function page_404($class_name, $class_path) { echo '404 page'; var_dump($class_n
 
 // 标准化的json输出方式
 function output_json($data) {
-	$output = false !== $data ? $data : array();
+	$output = !empty($data) ? $data : array();
 	
 	header('content-type: application/json; charset=utf-8');
 	$out_json = json_encode($output);
