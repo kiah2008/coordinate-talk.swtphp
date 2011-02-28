@@ -2,7 +2,7 @@
 
 define('ROOT',				dirname(__FILE__) . '/');
 define('CUSTOM_CFG_PATH',		ROOT . '/_custom_cfg/');
-define('IS_LOCAL',			$_SERVER['SERVER_ADDR'] == '192.168.56.101');
+define('IS_LOCAL',			$_SERVER['SERVER_ADDR'] == '127.0.0.1');
 define('IS_DEBUG',			true);
 
 include_once ROOT . '/../ujn2/ujn.php';
