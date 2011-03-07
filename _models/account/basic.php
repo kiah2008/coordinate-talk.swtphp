@@ -11,7 +11,8 @@ class mdl_account_basic extends ujn_model {
 	 * @param unknown_type $imei
 	 */
 	function FromImeiToUid($imei){
-
+		$sql="SELECT code FROM `swt_members` WHERE `imei`='$imei'";
+		$this->_db->query($sql);
 	}
 
 	////////////////////////////////////
