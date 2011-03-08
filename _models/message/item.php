@@ -21,7 +21,7 @@ EOT;
 	
 	/**
 	 * 
-	 * Enter description here ...
+	 * 增加一条消息到数据库
 	 * @param unknown_type $latitude
 	 * @param unknown_type $longitude
 	 * @param unknown_type $altitude
@@ -30,8 +30,22 @@ EOT;
 	 */
 	function AddMessageToDataBase($latitude,$longitude,$altitude,$message,$imei,$uid){
 		$sql = <<<EOT
-		INSERT INTO cta_message (send_account,note,latitude,longitude,
-		altitude,address_zh,address_en)
+		INSERT INTO `swt_message`
+		(`from_uid`,`send_uid`,`latitude`,`longitude`,`altitude`,`info`,
+		`doodle_path`,`send_date`,`address_zh`,`address_en`)
+		VALUES
+		(
+		{from_uid: INT UNSIGNED},
+		{send_uid: INT UNSIGNED},
+		{latitude: DOUBLE},
+		{longitude: DOUBLE},
+		{altitude: DOUBLE},
+		{info: VARCHAR},
+		{doodle_path: VARCHAR},
+		{address_zh: VARCHAR},
+		{address_en: VARCHAR}
+		);
+		
 		VALUES('$SendAccount','$Note','$Latitude','$Longitude','$Altitude',
 		'$AddressZH','$AddressEN');
 EOT;
